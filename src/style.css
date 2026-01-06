@@ -5,7 +5,7 @@
 }
 
 :root {
-  --wheel-size: min(82vmin, 760px); /* enlarge wheel; adjust 760px if you want bigger */
+  --wheel-size: min(82vmin, 7600px); /* enlarge wheel; adjust 760px if you want bigger */
   --spin-size: 30%;                /* center button size relative to wheel */
 }
 
@@ -102,7 +102,7 @@ body {
 #result {
   margin-top: 18px;
   width: min(var(--wheel-size), 760px);
-  padding: 12px 14px;
+  padding: 10px 1px;
 
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -185,3 +185,17 @@ body {
   12%  { opacity: 1; transform: translate(-50%, -50%) scale(1); }
   100% { opacity: 0; transform: translate(calc(-50% + var(--dx)), calc(-50% - 120px)) scale(1); }
 } */
+
+#wheelTitle {
+  margin-bottom: 16px;
+  text-align: center;
+
+  font-size: clamp(22px, 4vmin, 40px);
+  font-weight: 900;
+  letter-spacing: 1px;
+
+  color: #FFD166;
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.45),
+    0 0 14px rgba(255, 209, 102, 0.45);
+}
