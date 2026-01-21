@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Choose emoji sets based on result (customize this!)
     const good = ["🎉", "✨", "🎊", "🧧"];
     const bad = ["😈", "😭"];
-    const neutral = ["🤝"];
+    // const neutral = ["🤝"];
 
     const isBad = resultText.includes("0") || resultText.includes("/") || resultText.includes("-") || resultText.includes("谢谢参与");
     const pool = isBad ? bad : good;
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const rand = (m: number, M: number) => Math.random() * (M - m) + m;
-  const tot = sectors.length;
+  // const tot = sectors.length;
 
   const spinEl = document.querySelector<HTMLElement>("#spin");
   if (!spinEl) throw new Error("Missing element: #spin");
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const totalW = sectors.reduce((s, x) => s + x.weight, 0);
   const sectorAngles = (() => {
     let start = 0;
-    const n = sectors.length;
+    // const n = sectors.length;
   
     return sectors.map((s, i) => {
       const arc = (s.weight / totalW) * TAU;

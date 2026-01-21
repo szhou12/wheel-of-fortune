@@ -159,7 +159,7 @@ function start() {
   if (wordEl) setVisible(wordEl, true);
   if (cdEl) setVisible(cdEl, true);
 
-//   burst(result);
+  burst(result);
 
   timer = window.setInterval(() => {
     remaining -= 1;
