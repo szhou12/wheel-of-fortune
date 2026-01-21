@@ -2,18 +2,22 @@ import "./style.css";
 
 document.addEventListener("DOMContentLoaded", () => {
   const sectors = [
-    { color: "#f82", label: "谢谢参与", weight: 20 },
+    { color: "#f82", label: "谢谢参与", weight: 15 },
     { color: "#0bf", label: "即兴节目 +4", weight: 2 },
     { color: "#fb0", label: "x3", weight: 2 },
-    { color: "#0fb", label: "x2", weight: 4 },
-    { color: "#b0f", label: "x1.5", weight: 6 },
+    { color: "#0fb", label: "x2", weight: 3 },
+    // { color: "#b0f", label: "x1.5", weight: 6 },
     { color: "#f0b", label: "+2", weight: 8 },
     { color: "#bf0", label: "+1", weight: 10 },
     { color: "#bf0", label: "-2", weight: 6 },
     { color: "#bf0", label: "-1", weight: 8 },
-    { color: "#bf0", label: "x0", weight: 2 },
-    { color: "#bf0", label: "x0.5", weight: 10 },
-    { color: "#bf0", label: "x1/3", weight: 6 },
+    { color: "#f0b", label: "+4", weight: 2 },
+    { color: "#bf0", label: "+3", weight: 3 },
+    { color: "#bf0", label: "-4", weight: 2 },
+    { color: "#bf0", label: "-3", weight: 3 },
+    { color: "#bf0", label: "x0", weight: 1 },
+    // { color: "#bf0", label: "x0.5", weight: 10 },
+    // { color: "#bf0", label: "x1/3", weight: 6 },
   ] as const;
 
   const fx = document.querySelector<HTMLElement>("#fx");
