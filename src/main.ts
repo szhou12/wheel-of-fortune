@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
       const out = {
         ...s,
-        color: colorForIndex(i, n),
+        color: colorForIndex(i),
         start,
         end,
         mid,
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function fitTextOnRadius(text: string, maxWidth: number) {
       let size = 30;
       if (ctx) ctx.font = `900 ${size}px sans-serif`;
-      while (ctx.measureText(text).width > maxWidth && size > 12) {
+      while (ctx && ctx.measureText(text).width > maxWidth && size > 12) {
         size -= 1;
         if (ctx) ctx.font = `900 ${size}px sans-serif`;
       }

@@ -115,7 +115,7 @@ function burst(result: string) {
     chip.style.setProperty("--y", `${originY + (Math.random() - 0.5) * 60}px`);
     chip.style.setProperty("--dx", `${(Math.random() - 0.5) * 200}px`);
 
-    fx.appendChild(chip);
+    fx?.appendChild(chip);
     chip.addEventListener("animationend", () => chip.remove());
   }
 
@@ -139,25 +139,25 @@ function burst(result: string) {
 
     el.style.animationDelay = `${Math.random() * 120}ms`;
 
-    fx.appendChild(el);
+    fx?.appendChild(el);
     el.addEventListener("animationend", () => el.remove());
   }
 }
 
 function start() {
   // prevent double-start while running
-  btn.disabled = true;
+  if (btn) btn.disabled = true;
 
   clearTimer();
 
   const result = pickRandom(words);
-  wordEl.textContent = result;
+  if (wordEl) wordEl.textContent = result;
 
   remaining = 5;
-  cdEl.textContent = String(remaining);
+  if (cdEl) cdEl.textContent = String(remaining);
 
-  setVisible(wordEl, true);
-  setVisible(cdEl, true);
+  if (wordEl) setVisible(wordEl, true);
+  if (cdEl) setVisible(cdEl, true);
 
 //   burst(result);
 
@@ -166,13 +166,13 @@ function start() {
 
     if (remaining <= 0) {
       clearTimer();
-      setVisible(wordEl, false);
-      setVisible(cdEl, false);
-      btn.disabled = false;
+      if (wordEl) setVisible(wordEl, false);
+      if (cdEl) setVisible(cdEl, false);
+      if (btn) btn.disabled = false;
       return;
     }
 
-    cdEl.textContent = String(remaining);
+    if (cdEl) cdEl.textContent = String(remaining);
   }, 500);
 }
 
